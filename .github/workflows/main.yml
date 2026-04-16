@@ -1,1 +1,14 @@
- 
+name: 測試 Actions
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 印出訊息
+        run: echo "🎉 有新的推送！Actions 運作正常！"
+      - name: 列出台灣時間
+        run: TZ="Asia/Taipei" date
